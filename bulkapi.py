@@ -5,8 +5,6 @@ import io
 from datetime import datetime, date
 import urllib2
 from simplejson import JSONDecodeError
-from pyelasticsearch import ElasticSearch
-from pyazuresearch import *
 
 def RZC_Serializer(obj):
     
