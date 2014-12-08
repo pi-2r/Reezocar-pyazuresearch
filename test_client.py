@@ -12,7 +12,7 @@ resourceGroupName = "BizSpark"
 indexname =  "annonces"
 createindex = "demo"
 
-ESAZ = AzureSearch(serviceName, apiversion, apiKey)
+RZCAZ = AzureSearch(serviceName, apiversion, apiKey)
 
 
 class TestAzureSearch(unittest.TestCase):
@@ -32,10 +32,10 @@ class TestAzureSearch(unittest.TestCase):
                                                                 {"name": "year", "type": "Edm.Int32" },
                                                                 {"name": "price", "type": "Edm.Int32" }]  
                                 }
-                        ESAZ.createindex(indexname, createbody)
+                        RZCAZ.createindex(indexname, createbody)
                 
                 def test_getindex(self):
-                				ESAZ.getindex(createindex)
+                				RZCAZ.getindex(createindex)
                 
                 def test_updateindex(self):
                 	updateindex = {
@@ -53,15 +53,15 @@ class TestAzureSearch(unittest.TestCase):
                                                                 {"name": "price", "type": "Edm.Int32" },
                                                                 {"name" : "updateindex", "type": "Edm.String"}]  
                                 }
-                        ESAZ.updateindex(createindex, updateindex)
+                        RZCAZ.updateindex(createindex, updateindex)
                 def test_listindexes(self):
-                	ESAZ.listindexes(createindex)
+                	RZCAZ.listindexes(createindex)
                 '''
                 def test_deleteindex(self):
-                				ESAZ.deleteindex(createindex)
+                				RZCAZ.deleteindex(createindex)
                 '''
                 def test_stats(self):
-                                ESAZ.stats(createindex)
+                                RZCAZ.stats(createindex)
 
                 ##Document operations
                 def test_usedocument(self):
@@ -108,15 +108,15 @@ class TestAzureSearch(unittest.TestCase):
               			"@search.action": "delete",
               			"ref": "3"
             }]}
-                        ESAZ.usedocument(createindex, body)
+                        RZCAZ.usedocument(createindex, body)
                
                 def test_simplesearch(self):
                 	search ="brand3"
-                	ESAZ.simplesearch(createindex, search)
+                	RZCAZ.simplesearch(createindex, search)
                 
                 ## Index Admin API
                 def test_count(self):
-                	ESAZ.count(createindex)
+                	RZCAZ.count(createindex)
 
                 def test_createSearchService(self):
                 	body = { 
@@ -132,27 +132,27 @@ class TestAzureSearch(unittest.TestCase):
 							      "partitionCount": 1 | 2 | 3 | 4 | 6 | 12 
 							   } 
 							}
-                	ESAZ.createSearchService(subscriptionId, resourceGroupName, serviceName, body)
+                	RZCAZ.createSearchService(subscriptionId, resourceGroupName, serviceName, body)
 
                 def test_listAdminKeys(self):
-                	ESAZ.listAdminKeys(subscriptionId, resourceGroupName, serviceName)
+                	RZCAZ.listAdminKeys(subscriptionId, resourceGroupName, serviceName)
 
                 def test_getSearchService(self):
-                	ESAZ.getSearchService(subscriptionId, resourceGroupName, serviceName)
+                	RZCAZ.getSearchService(subscriptionId, resourceGroupName, serviceName)
 
                 def test_createQueryKey(self):
                 	name = "RZCtest"
-                	ESAZ.createQueryKey(subscriptionId, resourceGroupName, name)
+                	RZCAZ.createQueryKey(subscriptionId, resourceGroupName, name)
 
                 def test_listQueryKeys(self):
-                                ESAZ.listQueryKeys(subscriptionId, resourceGroupName)
+                                RZCAZ.listQueryKeys(subscriptionId, resourceGroupName)
 
                 def test_deleteSearchService(self):
-                	ESAZ.deleteSearchService(subscriptionId, resourceGroupName, serviceName)
+                	RZCAZ.deleteSearchService(subscriptionId, resourceGroupName, serviceName)
 
                 def test_regenerateAdminKey(self):
                 	regenerateKey = "primary"
-                	ESAZ.regenerateAdminKey(subscriptionId, resourceGroupName, serviceName, regenerateKey)
+                	RZCAZ.regenerateAdminKey(subscriptionId, resourceGroupName, serviceName, regenerateKey)
 
                 def test_updateSearchService(self):
                 	body = {
@@ -165,10 +165,10 @@ class TestAzureSearch(unittest.TestCase):
 							      "partitionCount": 1 | 2 | 3 | 4 | 6 | 12
 							   }
 							}
-                	ESAZ.updateSearchService(subscriptionId, resourceGroupName, serviceName, body)
+                	RZCAZ.updateSearchService(subscriptionId, resourceGroupName, serviceName, body)
                 def deleteQueryKey(self):
                 	key = "RZCtest"
-                	ESAZ.deleteQueryKey(subscriptionId, resourceGroupName, key)
+                	RZCAZ.deleteQueryKey(subscriptionId, resourceGroupName, key)
 
                 
  
