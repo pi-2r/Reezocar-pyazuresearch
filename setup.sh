@@ -20,4 +20,4 @@ apt-get install -y python python-pip
 pip install simplejson httplib2
 
 echo
-echo "Finish, you can launch bulkapi.py"
+echo "Finish, you can launch test_client.py"
