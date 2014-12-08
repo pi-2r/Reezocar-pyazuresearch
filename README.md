@@ -31,6 +31,7 @@ Simple use-case::
 
 
 About Azure Search: http://azure.microsoft.com/en-us/services/search/
+
 Official documentation: http://azure.microsoft.com/en-us/documentation/services/search/
 
 
