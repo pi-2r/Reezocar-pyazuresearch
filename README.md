@@ -34,6 +34,7 @@ About Azure Search: http://azure.microsoft.com/en-us/services/search/
 
 Official documentation: http://azure.microsoft.com/en-us/documentation/services/search/
 
+Azure Camp 9 Décembre - slides session- : http://fr.slideshare.net/Developpeurs/azure-camp-9-dcembre-slides-session-dveloppeurs-webmedia
 
 
 About Reezocar: http://www.reezocar.com/
