@@ -1,0 +1,37 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/dist
+/tmp
+**/target/*
+!**/target/generated-sources
+node_modules
+environment.dev.ts
+
+# IDEs and editors
+/.idea/*
+!/.idea/runConfigurations
+.project
+.classpath
+*.iml
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# IDE - VSCode Local History extension
+.history/*
+
+#System Files
+.DS_Store
+Thumbs.db
+settings.xml
+sign
+travis

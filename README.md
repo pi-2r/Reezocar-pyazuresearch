@@ -1,3 +1,5 @@
+![pi-2r](media/Azure_Search.png)
+
 pyazuresearch
 =============
 small python SDK for Azure Search Preview.
@@ -30,6 +32,8 @@ Simple use-case::
      >>> RZCAZ.createindex(indexname, createbody)
 
 
+Links
+-----------
 About Azure Search: http://azure.microsoft.com/en-us/services/search/
 
 Official documentation: http://azure.microsoft.com/en-us/documentation/services/search/
